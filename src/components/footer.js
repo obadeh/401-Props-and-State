@@ -1,10 +1,10 @@
 import React from 'react';
 
-let date = new Date().toDateString()
+let date = new Date().toDateString();
 const Footer = () => {
-    return (
+  return (
     <footer>by obada Q {date}</footer>
-    );
-  };
-  
-  export default Footer;
+  );
+};
+
+export default Footer;
