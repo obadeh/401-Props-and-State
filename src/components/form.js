@@ -6,9 +6,8 @@ function Form(props) {
     console.log('url', props.url);
     const raw = await fetch(props.url);
     const data = await raw.json();
-    console.log(data);
-    console.log(props);
-    console.log('fff', props.jj);
+    // console.log(data);
+    // console.log(props);
     props.handler(data);
     // return props.handler(data);
   };
