@@ -1,17 +1,29 @@
-import React from 'react';
+import React from "react";
 
-const Form = () => {
-    return (
-    
-        <form>
-            <input type="text">
-
-            </input>
-            
-            <button id="get">GET</button>
-        </form>
-    
-    );
+function Form(props) {
+  const handleSubmit = async event => {
+    event.preventDefault();
+    console.log("url", props.url);
+    const raw = await fetch(props.url);
+    const data = await raw.json();
+    console.log(data);
+    console.log(props);
+    console.log("fff", props.jj);
+    props.handler(data);
+    // return props.handler(data);
   };
-  
-  export default Form;
+  const handleChange = event => {
+    event.preventDefault();
+    let input = event.target.value;
+    console.log("input", input);
+    props.handelCh(input);
+  };
+  return (
+    <form onSubmit={handleSubmit}>
+      <input type="text" onChange={handleChange} />
+      <button>GET</button>
+    </form>
+  );
+}
+
+export default Form;
