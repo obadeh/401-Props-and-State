@@ -1,5 +1,5 @@
 import React from "react";
-// import "../style/style.scss";
+import "../style/style.scss";
 import Header from "./header.js";
 import Footer from "./footer.js";
 import Form from "./form.js";

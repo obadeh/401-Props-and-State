@@ -19,10 +19,12 @@ function Form(props) {
     props.handelCh(input);
   };
   return (
+      <div>
     <form onSubmit={handleSubmit}>
       <input type="text" onChange={handleChange} />
       <button>GET</button>
     </form>
+    </div>
   );
 }
 
