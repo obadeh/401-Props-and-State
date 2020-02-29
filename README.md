@@ -1,6 +1,6 @@
-# LAB - Class 28
+# LAB - Class 29/30
 
-## Props-and-State
+## Routing and Component Composition
 
 ### Author: obada al-quran
 

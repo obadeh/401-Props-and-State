@@ -19,7 +19,7 @@ class App extends React.Component {
     this.setState({ input });
     console.log('state', this.state.input);
   };
-  
+
 
   render() {
     return (
