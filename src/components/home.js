@@ -1,43 +1,22 @@
 import React from 'react';
 import Form from './form';
 import Result from './results';
-import History from './history';
-import ReactJson from 'react-json-view'
 
 
-// let history=[]
-class Home extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { results: [], input: '' };
-    this.history = [];
-  }
-    handleSubmit = results => {
-      this.setState({ results });
-      // this.setState([this.history.concat(this.state.input)])
-      this.history.push(this.state.input);
-      console.log('this.state.input : ', this.state.input);
-      console.log('history : ', this.history);
-    };
-    handleChange = input => {
-      this.setState({ input });
-      console.log('state', this.state.input);
-    };
+
+const Home = (props)=>{
 
 
-    render() {
-      return (
+   return (
         <React.Fragment>
           <h2>Home Page</h2>
-          <Form url={this.state.input}
-            handler={this.handleSubmit}
-            handelCh={this.handleChange}/>
-            <ReactJson src={this.state.results} />
-
-          <History history={this.history}/>
+          <Form url={props.url}
+            handler={props.sub}
+            handelCh={props.ch}/>
+            <Result results={props.results} />
         </React.Fragment>
       );
-    }
+    
 }
 
 export default Home;

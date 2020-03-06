@@ -1,27 +1,35 @@
 import React from 'react';
-
+import { trackPromise } from 'react-promise-tracker';
 function Form(props) {
   const handleSubmit = async event => {
     event.preventDefault();
-    console.log('url', props.url);
-    const raw = await fetch(props.url);
+    
+    const raw = await trackPromise(fetch(props.url));
     const data = await raw.json();
-    // console.log(data);
-    // console.log(props);
+    
     props.handler(data);
-    // return props.handler(data);
   };
   const handleChange = event => {
     event.preventDefault();
     let input = event.target.value;
-    console.log('input', input);
     props.handelCh(input);
   };
+  const method = event =>{
+    event.preventDefault();
+    let method = event.target.value;
+    console.log('method : ', method);
+  }
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <input type="text" onChange={handleChange} />
-        <button>GET</button>
+        <input onChange={handleChange} />
+        <button onClick={method} value='GET'>GET</button>
+        <button  onClick={method} value='POST'>POST</button>
+        <button  onClick={method} value='PUT'>PUT</button>
+        <button  onClick={method} value='PATCH'>PATCH</button>
+        <button>DELETE</button>
+
+        <button className="go" type='submit'>Go!</button>
       </form>
     </div>
   );

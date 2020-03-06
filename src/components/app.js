@@ -2,9 +2,6 @@ import React from 'react';
 import '../style/style.scss';
 import Header from './header.js';
 import Footer from './footer.js';
-import Form from './form.js';
-import Results from './results';
-import Main from './main.js';
 import { Route } from 'react-router-dom';
 import History from './history.js';
 import Home from './home.js';
@@ -14,10 +11,25 @@ import Home from './home.js';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { results: [], input: '' };
+    this.state = { results: [], input: '',history : [] };
+
   }
   handleSubmit = results => {
+    let history2= this.state.history;
     this.setState({ results });
+    // this.setState([...this.state.history,this.state.input] )
+    this.setState(state => {
+      const history = [...state.history, state.input];
+      return {
+        history
+      };
+    });
+    console.log('history : ',history2 );
+    console.log('this.state.input : ',this.state.input );
+    console.log('this.state.history : ',this.state.history );
+
+
+
   };
   handleChange = input => {
     this.setState({ input });
@@ -29,14 +41,10 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <Header />
-        {/* <Form
-          url={this.state.input}
-          handler={this.handleSubmit}
-          handelCh={this.handleChange}
-        /> */}
-       <Route exact path="/" component={Home} />
-      <Route exact path="/history" render={() => <History />} />
-        {/* <Results result={this.state.results} /> */}
+        
+      <Route exact path="/" render={() => <Home results={this.state.results} url={this.state.input} sub={this.handleSubmit} ch={this.handleChange}/>} />
+      <Route exact path="/history" render={() => <History history={this.state.history}/>} />
+      
         <Footer />
       </React.Fragment>
     );

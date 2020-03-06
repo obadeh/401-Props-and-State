@@ -1,7 +1,9 @@
 import React from 'react';
 
+
+
+
 const Histoy = (props) => {
-  console.log('props.history : ', props.history);
   let items = props.history.map((item, i) => <li key={i}>{item}</li>);
 
   return (

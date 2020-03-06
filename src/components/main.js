@@ -2,7 +2,6 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import History from './history.js';
 
-import Form from './form.js';
 import Home from './home.js';
 
 const Main = props => {
