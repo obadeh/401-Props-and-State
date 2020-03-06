@@ -15,7 +15,6 @@ class App extends React.Component {
 
   }
   handleSubmit = results => {
-    let history2= this.state.history;
     this.setState({ results });
     // this.setState([...this.state.history,this.state.input] )
     this.setState(state => {
@@ -24,12 +23,6 @@ class App extends React.Component {
         history
       };
     });
-    console.log('history : ',history2 );
-    console.log('this.state.input : ',this.state.input );
-    console.log('this.state.history : ',this.state.history );
-
-
-
   };
   handleChange = input => {
     this.setState({ input });
@@ -39,15 +32,14 @@ class App extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
+      <div>
         <Header />
         
       <Route exact path="/" render={() => <Home results={this.state.results} url={this.state.input} sub={this.handleSubmit} ch={this.handleChange}/>} />
       <Route exact path="/history" render={() => <History history={this.state.history}/>} />
       
         <Footer />
-      </React.Fragment>
-    );
+        </div>    );
   }
 }
 
