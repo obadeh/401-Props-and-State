@@ -5,6 +5,10 @@ import Footer from './footer.js';
 import Form from './form.js';
 import Results from './results';
 import Main from './main.js';
+import { Route } from 'react-router-dom';
+import History from './history.js';
+import Home from './home.js';
+
 
 
 class App extends React.Component {
@@ -30,7 +34,8 @@ class App extends React.Component {
           handler={this.handleSubmit}
           handelCh={this.handleChange}
         /> */}
-        <Main/>
+       <Route exact path="/" component={Home} />
+      <Route exact path="/history" render={() => <History />} />
         {/* <Results result={this.state.results} /> */}
         <Footer />
       </React.Fragment>
