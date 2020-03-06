@@ -6,10 +6,13 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.1",
     "@testing-library/user-event": "^7.2.1",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
     "eslint": "^6.8.0",
     "node-sass": "^4.13.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
+    "react-json-view": "^1.19.1",
     "react-scripts": "3.4.0"
   },
   "scripts": {
@@ -17,12 +20,18 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint '**/*.js'"
-
+    "lint": "eslint '**/*.js'",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/obadeh/401-Props-and-State.git"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
+  "homepage": "https://obadeh.github.io/401-Props-and-State/",
   "browserslist": {
     "production": [
       ">0.2%",

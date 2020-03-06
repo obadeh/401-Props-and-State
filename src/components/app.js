@@ -5,6 +5,7 @@ import Footer from './footer.js';
 import Form from './form.js';
 import Results from './results';
 
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -17,13 +18,10 @@ class App extends React.Component {
     this.setState({ input });
     console.log('state', this.state.input);
   };
-  // handleChange() {
-  // console.log("value from cons", value);
-  // this.setState({ value });
-  //  }
 
   render() {
     return (
+      <div>
       <React.Fragment>
         <Header />
         <Form
@@ -34,6 +32,7 @@ class App extends React.Component {
         <Results result={this.state.results} />
         <Footer />
       </React.Fragment>
+      </div>
     );
   }
 }

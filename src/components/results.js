@@ -1,9 +1,12 @@
 import React from 'react';
+import ReactJson from 'react-json-view'
+
 
 function Result(props) {
-  console.log('llll', JSON.stringify(props.result));
 
-  return <pre>{JSON.stringify(props.result, undefined, 4)}</pre>;
+  return( 
+  <ReactJson src={props.result}/>
+  );
 }
 
 export default Result;
