@@ -20,7 +20,7 @@ class App extends React.Component {
     this.setState(state => {
       const history = [...state.history, state.input];
       return {
-        history
+        history,
       };
     });
   };
@@ -34,12 +34,12 @@ class App extends React.Component {
     return (
       <div>
         <Header />
-        
-      <Route exact path="/" render={() => <Home results={this.state.results} url={this.state.input} sub={this.handleSubmit} ch={this.handleChange}/>} />
-      <Route exact path="/history" render={() => <History history={this.state.history}/>} />
-      
+
+        <Route exact path="/" render={() => <Home results={this.state.results} url={this.state.input} sub={this.handleSubmit} ch={this.handleChange}/>} />
+        <Route exact path="/history" render={() => <History history={this.state.history}/>} />
+
         <Footer />
-        </div>    );
+      </div>    );
   }
 }
 

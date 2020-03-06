@@ -5,7 +5,7 @@ import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { BrowserRouter } from 'react-router-dom';
 
-configure({ adapter: new Adapter(), });
+configure({ adapter: new Adapter() });
 
 import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';

@@ -9,7 +9,7 @@ import {  NavLink } from 'react-router-dom';
 
 
 const Histoy = (props) => {
-  
+
   let items = props.history.map((item, i) => <li key={i}>{item}<button><NavLink to="/">re-run</NavLink></button> </li>);
 
   return (
@@ -17,10 +17,10 @@ const Histoy = (props) => {
       <h1>History</h1>
       <ul>
         {items}
-        
+
 
       </ul>
-    <Route exact path="/" component={Home}>home</Route>
+      <Route exact path="/" component={Home}>home</Route>
 
     </header>
   );

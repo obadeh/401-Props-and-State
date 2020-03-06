@@ -3,10 +3,10 @@ import { trackPromise } from 'react-promise-tracker';
 function Form(props) {
   const handleSubmit = async event => {
     event.preventDefault();
-    
+
     const raw = await trackPromise(fetch(props.url));
     const data = await raw.json();
-    
+
     props.handler(data);
   };
   const handleChange = event => {
@@ -18,7 +18,7 @@ function Form(props) {
     event.preventDefault();
     let method = event.target.value;
     console.log('method : ', method);
-  }
+  };
   return (
     <div>
       <form onSubmit={handleSubmit}>
