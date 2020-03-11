@@ -32,4 +32,4 @@ i.e.
 
 #### UML
 
-![uml](./props.jpg)
+![uml](./resty.png)
