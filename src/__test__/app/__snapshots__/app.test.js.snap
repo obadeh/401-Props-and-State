@@ -84,7 +84,7 @@ exports[`<App /> renders correctly 1`] = `
   </h3>
   <footer>
     by obada Q 
-    Wed Mar 11 2020
+    Thu Mar 12 2020
   </footer>
 </div>
 `;
