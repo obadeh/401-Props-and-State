@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/401-Props-and-State/static/css/main.bbc52572.chunk.css",
+    "main.js": "/401-Props-and-State/static/js/main.5b4ffe4f.chunk.js",
+    "main.js.map": "/401-Props-and-State/static/js/main.5b4ffe4f.chunk.js.map",
+    "runtime-main.js": "/401-Props-and-State/static/js/runtime-main.32c5fd8a.js",
+    "runtime-main.js.map": "/401-Props-and-State/static/js/runtime-main.32c5fd8a.js.map",
+    "static/js/2.a814f0f5.chunk.js": "/401-Props-and-State/static/js/2.a814f0f5.chunk.js",
+    "static/js/2.a814f0f5.chunk.js.map": "/401-Props-and-State/static/js/2.a814f0f5.chunk.js.map",
+    "index.html": "/401-Props-and-State/index.html",
+    "precache-manifest.a96c0fe95d1a8720bf4aa118da798a2a.js": "/401-Props-and-State/precache-manifest.a96c0fe95d1a8720bf4aa118da798a2a.js",
+    "service-worker.js": "/401-Props-and-State/service-worker.js",
+    "static/css/main.bbc52572.chunk.css.map": "/401-Props-and-State/static/css/main.bbc52572.chunk.css.map",
+    "static/js/2.a814f0f5.chunk.js.LICENSE.txt": "/401-Props-and-State/static/js/2.a814f0f5.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.32c5fd8a.js",
+    "static/js/2.a814f0f5.chunk.js",
+    "static/css/main.bbc52572.chunk.css",
+    "static/js/main.5b4ffe4f.chunk.js"
+  ]
+}
