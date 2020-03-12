@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> renders correctly 1`] = `
+<div>
+  <header
+    className="title"
+  >
+    <h1>
+      RUSTy App
+    </h1>
+    <nav>
+      <ul>
+        <li>
+          <a
+            aria-current="page"
+            className="active"
+            href="/"
+            onClick={[Function]}
+            style={Object {}}
+          >
+            Home
+          </a>
+        </li>
+        <li>
+          <a
+            aria-current={null}
+            href="/history"
+            onClick={[Function]}
+          >
+            History
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <h2>
+    Home Page
+  </h2>
+  <div>
+    <form
+      onSubmit={[Function]}
+    >
+      <input
+        onChange={[Function]}
+      />
+      <button
+        onClick={[Function]}
+        value="GET"
+      >
+        GET
+      </button>
+      <button
+        onClick={[Function]}
+        value="POST"
+      >
+        POST
+      </button>
+      <button
+        onClick={[Function]}
+        value="PUT"
+      >
+        PUT
+      </button>
+      <button
+        onClick={[Function]}
+        value="PATCH"
+      >
+        PATCH
+      </button>
+      <button>
+        DELETE
+      </button>
+      <button
+        className="go"
+        type="submit"
+      >
+        Go!
+      </button>
+    </form>
+  </div>
+   
+  <h3>
+    no result yet
+  </h3>
+  <footer>
+    by obada Q 
+    Thu Mar 12 2020
+  </footer>
+</div>
+`;
